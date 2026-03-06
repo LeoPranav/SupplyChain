@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logistics Billing Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="nav-wrap">
+        <div class="brand">SupplyChain</div>
+        <nav class="desktop-nav">
+          <a href="#problem">Problem</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#insights">Insights</a>
+          <a href="#writeup">Write-up</a>
+        </nav>
+        <button class="outline-btn">Try Demo</button>
+      </header>
+
+      <main>
+        <section class="hero section-gradient">
+          <p class="eyebrow">Audit Freight Faster, Recover Revenue Sooner.</p>
+          <h1>
+            Logistics Billing Checker
+            <span>for D2C Finance Teams</span>
+          </h1>
+          <p class="sub-copy">
+            Process hundreds of invoice line items in minutes. Detect weight slab errors,
+            zone misclassification, duplicate AWBs, and phantom surcharges before payout.
+          </p>
+          <div class="cta-row">
+            <button class="primary-btn">Upload Invoice Batch</button>
+            <button class="ghost-btn">See Error Dashboard</button>
+          </div>
+
+          <div class="hero-card">
+            <div class="metric-block">
+              <h3>847 line items checked</h3>
+              <p>Manual: 4 hours → Automated: 3 minutes</p>
+            </div>
+            <div class="metric-grid">
+              <article>
+                <h4>₹18,400</h4>
+                <p>Overcharges detected</p>
+              </article>
+              <article>
+                <h4>39</h4>
+                <p>AWBs flagged</p>
+              </article>
+              <article>
+                <h4>5</h4>
+                <p>Providers normalized</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="problem" class="problem split-section">
+          <div>
+            <h2>
+              Designed to expose hidden
+              <span>billing leakages</span>
+              before finance closes payout.
+            </h2>
+          </div>
+          <div>
+            <p>
+              Overcharges persist because invoices and contracts are structured around complex
+              slabs, zone tables, and exception fees. Teams review totals, not line-item logic.
+              This UI is built around the checks that repeatedly uncover avoidable spend.
+            </p>
+          </div>
+        </section>
+
+        <section id="workflow" class="workflow section-gradient-soft">
+          <h2>3-stage verification workflow</h2>
+          <div class="workflow-grid">
+            <article>
+              <h3>Stage 1 — Extract</h3>
+              <p>
+                Parse AWB, pickup/delivery pincodes, billed weight, zone, base freight,
+                surcharges, RTO, COD, and fuel adjustments from mixed invoice formats.
+              </p>
+            </article>
+            <article>
+              <h3>Stage 2 — Check</h3>
+              <p>
+                Recompute each line against contracted slabs: dead weight vs volumetric,
+                zone mapping, minimum charges, COD/RTO rules, and non-contracted add-ons.
+              </p>
+            </article>
+            <article>
+              <h3>Stage 3 — Prepare Payout</h3>
+              <p>
+                Export discrepancy reason codes and a verified payout file so finance teams can
+                deduct overcharges before releasing payment.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="insights" class="insights">
+          <h2>What gets flagged and why it persists</h2>
+          <div class="pill-grid">
+            <div class="pill">Weight slab rounding jump</div>
+            <div class="pill">Zone mapped as higher-cost lane</div>
+            <div class="pill">Duplicate AWB billed twice</div>
+            <div class="pill">RTO/COD charged outside contract</div>
+            <div class="pill">Fuel or remote area surcharge variance</div>
+            <div class="pill">Non-contracted handling fee</div>
+          </div>
+        </section>
+
+        <section id="writeup" class="writeup section-gradient">
+          <h2>Brief write-up</h2>
+          <p>
+            The core D2C insight is that logistics losses usually come from silent unit economics,
+            not headline freight rates. Most brands negotiate good base pricing but leak margin in
+            the exceptions: incorrect zone assignment, slab escalations from rounded weights,
+            and surcharges that should be conditional but are treated as default. The design
+            prioritizes these high-frequency leakage points first, so users can see where variance
+            accumulates across billing cycles.
+          </p>
+          <p>
+            Building for finance operations meant reducing review friction. Instead of presenting
+            extraction output alone, the interface mirrors payout decisions: billed amount,
+            expected amount, variance reason, and actionability. This improves adoption because
+            operations and finance can align quickly on recoveries and dispute packets.
+          </p>
+          <p>
+            The system also separates provider-specific invoice noise from a normalized audit model.
+            That matters because invoice layouts differ, but contractual logic does not.
+            By structuring checks around business rules (weight slabs, zone tables, surcharge
+            entitlements), the approach remains extensible across Delhivery, Blue Dart,
+            Ecom Express, and future partners without redesigning core UX flows.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
